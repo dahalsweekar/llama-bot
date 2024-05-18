@@ -10,8 +10,7 @@ This project does not utilize any API keys, as Ollama3 is integrated into the sy
 
 | Upload page  | Chatroom
 | ------------- | ------------- |
-|![w1](https://github.com/dahalsweekar/llama-bot/assets/99968233/4fd19808-c509-4ad6-8144-b9f709b1d112)|![c1](https://github.com/dahalsweekar/llama-bot/assets/99968233/55c022c8-c9ec-4d28-a9e5-86ba88f70a60)
-|
+|![w1](https://github.com/dahalsweekar/llama-bot/assets/99968233/4fd19808-c509-4ad6-8144-b9f709b1d112)|![c1](https://github.com/dahalsweekar/llama-bot/assets/99968233/55c022c8-c9ec-4d28-a9e5-86ba88f70a60)|
 
 # Features
 
@@ -38,7 +37,7 @@ The information between the client and server is done using FastAPI and Ajax, wh
  4. ```git clone https://github.com/dahalsweekar/llama-bot.git```
  5. ```pip install -r requirements.txt```
  6. Navigate to the folder and in terminal write ```uvicorn main:app --reload```
- 7. In your browser locate: [localhost](http://localhost:8000) (port number may change)
+ 7. In your browser locate: http://localhost:8000 (port number may change)
 
 # Usage
  1. Press ```browse```
