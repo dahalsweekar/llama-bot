@@ -28,14 +28,14 @@ The information between the client and server is done using FastAPI and Ajax, wh
 | ```/question```  | *POST* | JSON |
 
 # Installation
- 1. Go to [ollama.ai](https://ollama.com/), download and install the LLM. In my case I used terminal (linux)
-   1.1 ```curl -fsSL https://ollama.com/install.sh | sh```
- 2. After download, in the same page, click on the 'Model' on top right corner. You can see the latest models being added.
- 3. Open terminal and write ```ollama pull <name of your desired model>```. In my case, I have used llama3. i.e ```ollama pull llama3```. It uses approx. 4GBs of space
- 4. ```git clone https://github.com/dahalsweekar/llama-bot.git```
- 5. ```pip install -r requirements.txt```
- 6. Navigate to the folder and in terminal write ```uvicorn main:app --reload```
- 7. In your browser locate: http://localhost:8000 (port number may change)
+ 1. Go to [ollama.ai](https://ollama.com/), download and install the LLM.
+ 1.1 . In my case I used terminal (linux) ```curl -fsSL https://ollama.com/install.sh | sh```
+ 3. After download, in the same page, click on the 'Model' on top right corner. You can see the latest models being added.
+ 4. Open terminal and write ```ollama pull <name of your desired model>```. In my case, I have used llama3. i.e ```ollama pull llama3```. It uses approx. 4GBs of space
+ 5. ```git clone https://github.com/dahalsweekar/llama-bot.git```
+ 6. ```pip install -r requirements.txt```
+ 7. Navigate to the folder and in terminal write ```uvicorn main:app --reload```
+ 8. In your browser locate: http://localhost:8000 (port number may change)
 
 # Usage
  1. Press ```browse```
