@@ -1,6 +1,4 @@
-# LLamaBot
-
-### Your very own PDF summarizer 
+# LLamaBot: Your very own PDF summarizer 
 
 # Introduction
 This repository implements the latest (as of now) Large Language Model (LLM) - Ollama3 to extract meaning behind the uploaded documents.
