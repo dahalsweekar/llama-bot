@@ -10,12 +10,10 @@ This project does not utilize any API keys, as Ollama3 is integrated into the sy
 
 # Features
 
-1. Ollama3
-This LLM runs independenly on personal server. If a server is powerful enough i.e if a server has a powerful GPU, then the task of generating the conversation becomes feasiable.
-One benefit of doing this way is that your do not require API keys (which should be purchased in most cases). The installation process is fairly straight forward and the models are being upgraded everyday as I write.
-The process of switching between the models is easy and hence some form of research can be done on such models such as its accuracy and execution time.
+## 1. Ollama3
+This LLM runs independenly on personal server. If a server is powerful enough i.e if a server has a powerful GPU, then the task of generating the conversation becomes feasiable. One benefit of doing this way is that your do not require API keys (which should be purchased in most cases). The installation process is fairly straight forward and the models are being upgraded everyday as I write. The process of switching between the models is easy and hence some form of research can be done on such models such as its accuracy and execution time.
 
-3. Front-end, APIs, and Server
+## 2. Front-end, APIs, and Server
 This project is fully equipped with three main components that makes up a runnable application. I have created fairly beautiful UI and easy navigation process.
 Though, authentication is not implemented, it can be implemented and will be implemented in future projects.
 The information between the client and server is done using FastAPI and Ajax, which could provide two layers of security if needed.
@@ -29,7 +27,7 @@ The information between the client and server is done using FastAPI and Ajax, wh
 
 # Installation
  1. Go to ollama.ai, download and install the LLM. In my case I used terminal (linux)
- 	```'curl -fsSL https://ollama.com/install.sh | sh'```
+```'curl -fsSL https://ollama.com/install.sh | sh'```
  2. After download, in the same page, click on the 'Model' on top right corner. You can see the latest models being added.
  3. Open terminal and write ```ollama pull <name of your desired model>```. In my case, I have used llama3. i.e ```ollama pull llama3```. It uses approx. 4GBs of space
  4. ```git clone https://github.com/dahalsweekar/llama-bot.git```
@@ -45,16 +43,16 @@ The information between the client and server is done using FastAPI and Ajax, wh
  5. Have conversation
 
 # Pipeline
-
+```
 [PDF file] ---> [PDF parser] ---> [Texts] ---> [Chunk of Texts] ---> [Embedding] ---> [LLM] ----------> [conversation]
-																						^						|
-																						|						|
-																						|						|
-																						|						|
-																						|						|
-																																											
-																					[chatroom]<---[load pdf]<---[UI]<---[User]
+																															^					|
+																															|					|
+																															|					|
+																															|					|
 
+																															[chatroom]<---[load pdf]<---[UI]<---[User]
+
+```
 # Difficiencies
 
 It takes a lot of time if you donot have a powerful system. In my case, I am using CPU to do the heavy lifting. 
