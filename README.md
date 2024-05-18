@@ -44,15 +44,15 @@ The information between the client and server is done using FastAPI and Ajax, wh
 
 # Pipeline
 ```
-
 [PDF file] ---> [PDF parser] ---> [Texts] ---> [Chunk of Texts] ---> [Embedding] ---> [LLM] ----------> [conversation]
-																						^						|
-																						|						|
-																						|						|
-																						|						|
-																						|						|
-																																											|
-																					[chatroom]<---[load pdf]<---[UI]<---[User]
+                                                                                        ^                       |
+                                                                                        |                       |
+                                                                                        |                       |
+                                                                                        |                       |
+                                                                                        |                       |
+                                                                                                                            
+                                                                                    [chatroom]<---[load pdf]<---[UI]<---[User]
+
 
 ```
 # Difficiencies
