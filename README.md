@@ -15,6 +15,9 @@ This project does not utilize any API keys, as Ollama3 is integrated into the sy
 ## 1. Ollama3
 This LLM runs independenly on personal server. If a server is powerful enough i.e if a server has a powerful GPU, then the task of generating the conversation becomes feasiable. One benefit of doing this way is that your do not require API keys (which should be purchased in most cases). The installation process is fairly straight forward and the models are being upgraded everyday as I write. The process of switching between the models is easy and hence some form of research can be done on such models such as its accuracy and execution time.
 
+## 2. Langchain
+A langchain is a production ready library which allows developer to employ LLMs with single line of code. It is a open source python library, which can be installed using pip. The langchain has many features from splitting a text into chunks, to employing a LLM for text generation. 
+
 ## 2. Front-end, APIs, and Server
 This project is fully equipped with three main components that makes up a runnable application. I have created fairly beautiful UI and easy navigation process.
 Though, authentication is not implemented, it can be implemented and will be implemented in future projects.
@@ -56,6 +59,11 @@ The information between the client and server is done using FastAPI and Ajax, wh
 
 
 ```
+
+# Explaination:
+
+In this project, I used a database to store the pdf file when uploaded. The file is stored as 'BLOB' and when extracted from the database, it must be read using io.BytesIO.PDF file is parsed by using python library such as PyPDF2. Once the pdf is parsed the contents (bytes) are organized and converted into texts. These texts are divided into chunk of texts. This is done by inbuilt langchain library. In order to reduce and avoid 'hallucination', overlapping feature is enabled. In this project, overlapping is set to 200, which means once a chunk is created in order to create the next chunk, the pointer moves 200 character backwards and starts from there. This will reduce the risk of loss of meaning in the contents. These chunks are then embedded. Embedding is the process of converting the characters/words into stream of bits. Based upon the close-ness of the meaning between two texts, these numbers varies. For example, in one demonstration the actor extracts the bit between two variables: Apple and Orange. The common feature between these two words are that they are fruits. So, one would expect the extracted number be closer to 0. In another demonstration, when bit representation of Apple and Iphone was extracted, the bit value was even smaller than the bit representing of Apple and Orange. This clearly shows that the bit is representing the relation of Apple with a company, which is one of the most fascinating feature of Embedding. Here in this project I used Chromadb as vector store. These embedding along with the question of the user is fed to the LLM, which then extracts the conversation.
+ 
 # Difficiencies
 
 It takes a lot of time if you donot have a powerful system. In my case, I am using CPU to do the heavy lifting. 
