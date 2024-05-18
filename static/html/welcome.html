@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLamaBot-PDF</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', path='/css/welcome.css')}}">
+</head>
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <h1>LLamaBot</h1>
+    </div>
+    <div class="row justify-content-center">
+        <p>Upload your PDF</p>
+    </div>
+    <div class="content w-25" style="width:800px; margin:0 auto;">
+        <div class="buttons">
+            <form id="uploadForm">
+                <div class="mb-3">
+                    <label for="file" class="form-label">Choose file</label>
+                    <input type="file" class="form-control form-label-sm" id="file" name="file" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Upload</button>
+            </form>
+            <p></p>
+            <button onclick="location.href='/room'" class="btn btn-outline-success">Go ></button>
+        </div>
+    </div>
+    <div style="position:fixed; bottom:0; right:0; padding-right:20px">
+        <p>powered by Ollama</p>
+    </div>
+</div>
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const formData = new FormData();
+            formData.append('file', document.getElementById('file').files[0]);
+
+            const response = await fetch('http://127.0.0.1:8000/upload', {
+                method: 'POST',
+                body: formData
+            });
+        });
+    </script>
+
+    <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js">
+    </script>
+</body>
+</html>
