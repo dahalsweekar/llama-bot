@@ -18,7 +18,7 @@ This LLM runs independenly on personal server. If a server is powerful enough i.
 ## 2. Langchain
 A langchain is a production ready library which allows developer to employ LLMs with single line of code. It is a open source python library, which can be installed using pip. The langchain has many features from splitting a text into chunks, to employing a LLM for text generation. 
 
-## 2. Front-end, APIs, and Server
+## 3. Front-end, APIs, and Server
 This project is fully equipped with three main components that makes up a runnable application. I have created fairly beautiful UI and easy navigation process.
 Though, authentication is not implemented, it can be implemented and will be implemented in future projects.
 The information between the client and server is done using FastAPI and Ajax, which could provide two layers of security if needed.
