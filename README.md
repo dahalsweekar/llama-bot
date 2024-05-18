@@ -71,6 +71,12 @@ Therefore, my execution time for a single question was a whooping 9 minutes.
 ### Back-end execution
 ![p1](https://github.com/dahalsweekar/llama-bot/assets/99968233/68dded83-be4b-4711-887b-8efbfff209c1)
 
+# To dos:
+
+- [ ] Delete the contents of the database once the conversation stops.
+- [ ] Do the initial embedding only once after PDF upload, and then other embedding will be done throughout the conversation.
+- [ ] Fix bugs and issues 
+
 # References:
 1. FastAPI: https://fastapi.tiangolo.com/
 2. JQuery/Ajax: https://api.jquery.com/jQuery.ajax/
