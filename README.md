@@ -1,4 +1,4 @@
-# LLamaBot: Your very own PDF summarizer 
+# LLamaBot 🦙: Your very own PDF summarizer 📚
 
 # Introduction
 This repository implements the latest (as of now) Large Language Model (LLM) - Ollama3 to extract meaning behind the uploaded documents.
@@ -29,7 +29,7 @@ The information between the client and server is done using FastAPI and Ajax, wh
 
 # Installation
  1. Go to [ollama.ai](https://ollama.com/), download and install the LLM.
- 1.1 . In my case I used terminal (linux) ```curl -fsSL https://ollama.com/install.sh | sh```
+         1.1. In my case I used terminal (linux) ```curl -fsSL https://ollama.com/install.sh | sh```
  3. After download, in the same page, click on the 'Model' on top right corner. You can see the latest models being added.
  4. Open terminal and write ```ollama pull <name of your desired model>```. In my case, I have used llama3. i.e ```ollama pull llama3```. It uses approx. 4GBs of space
  5. ```git clone https://github.com/dahalsweekar/llama-bot.git```
@@ -46,7 +46,7 @@ The information between the client and server is done using FastAPI and Ajax, wh
 
 # Pipeline
 ```
-[PDF file] ---> [PDF parser] ---> [Texts] ---> [Chunk of Texts] ---> [Embedding] ---> [LLM] ----------> [conversation]
+[PDF file] ---> [PDF parser] ---> [Texts] ---> [Chunk of Texts] ---> [Embedding] ---> [LLM] ---------> [conversation]
                                                                                         ^                       |
                                                                                         |                       |
                                                                                         |                       |
